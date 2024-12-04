@@ -2,14 +2,23 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import WelcomeMessage from './Welcome'
+import { MyButton } from './App_component'
+import  './Style.css'
+import Profile from './App_component'
+import { MyButton1 } from './App_Comp'
+import { Profile1 } from './App_Comp'
+import { Click } from './App_Comp'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <WelcomeMessage/>
-  )
+    <div>
+      <Profile/>
+      <h2>This is my Page!</h2>
+      <MyButton/>
+      <Click/>
+     
+    </div>
+  );
 }
 
 export default App
