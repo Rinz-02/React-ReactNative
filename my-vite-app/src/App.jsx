@@ -1,15 +1,11 @@
 
 import './App.css'
-import React, { createContext } from 'react'
-import My_List from './assets/Chapter/Ch5/HandlerParam';
-import { List } from './assets/Chapter/Ch5/LIstFunction';
-import EventHandler from './assets/Chapter/Ch5/HigherOrderHandler';
-import { ToDoList } from './assets/Chapter/Ch5/ToDoList';
-import { InputChange } from './assets/Chapter/Ch5/InputOnChange';
-import { Bookshop } from './assets/Chapter/Ch6/Rruseable/BookShop';
-
-
-
+import React, { createContext, useState } from 'react'
+import { BrowserRouter as Router, Route ,Redirect} from "react-router-dom";
+import Product from './assets/Chapter/Ch9/exercise/Product';
+import axios from "axios";
+import { useEffect } from 'react';
+import ExerciseForm from './assets/Chapter/Exercise/ExerciseForm';
 
   // function ChoosePage({page}){
   //   const Page = [Page1,Page2,Page3] [page];
@@ -30,7 +26,7 @@ import { Bookshop } from './assets/Chapter/Ch6/Rruseable/BookShop';
 // ];
 
 
-function App() {
+function functionRouteExe() {
  
 
   // let userName = "Eant";
@@ -48,9 +44,9 @@ function App() {
   // );
 
   return(<>
-
-     <Bookshop />
-   
+  <Route path="/" component={Product} />
+  <Route path="/RouteExe/:productName" component={Product} />
+     
   </>)
 }
 //   export function reverse() { 
@@ -58,3 +54,32 @@ function App() {
 // }
 
 export default App
+
+// function App(){
+//   const[items,setItems] = useState([]);
+
+//   useEffect(() => {
+//     async function getItems() {
+//       const req = await axios.get("http://localhost:8080/userList");
+//       console.log(req.data.items);
+//       setItems(req.data.items);
+//     }
+
+//     getItems();
+//   }, []);
+
+//   return(
+//     <ul>
+//       {items.map((item) => {
+//         <li key={item}>{item}</li>
+//       })}
+//       <li>List</li>
+//     </ul>
+//   )
+// }
+
+function App(){
+  return<>
+     <ExerciseForm />
+  </>
+}
