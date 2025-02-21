@@ -28,7 +28,7 @@ import TemporaryDrawer from "./assets/Chapter/Application.jsx";
 //     </ul>
 //   )
 // }
-function App() {
+function Appfunction() {
   const [link, setLink] = useState([
     { url: "/first", name: "First Page" },
     { url: "/second", name: "Second Page" },
