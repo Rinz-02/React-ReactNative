@@ -6,7 +6,7 @@ import { createStaticNavigation } from "@react-navigation/native";
 import { FirstPage,SecondPage,ThirdPage } from "./chapter-18/NavigateProgress";
 import CartContextProvider from "./chapter-19/fakeStoreAPI/CartContextProvider";
 import { Store } from "./chapter-19/fakeStoreAPI/StoreApp";
-
+import { Form } from "./chapter-20/Form";
 const RootStack = createNativeStackNavigator({
   screens : {
     Home : HomeScreen,
@@ -22,9 +22,7 @@ const Navigation = createStaticNavigation(RootStack);
 export default function App() {
   return (
     <>
-      <CartContextProvider>
-        <Store/>
-      </CartContextProvider>
+      <Form/>
     </>
   );
 }
